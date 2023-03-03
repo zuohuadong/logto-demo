@@ -1,7 +1,7 @@
 tasks:
   - name: Start Logto
     init: |
-      curl -fsSL https://raw.githubusercontent.com/logto-io/logto/89715baaa6ab0163309539b744f5027a4dcca2ae/docker-compose.yml > docker-compose.yml
+      curl -fsSL https://raw.githubusercontent.com/logto-io/logto/1d2b8554199f0cd85eb6a230310b71c96a2c431a/docker-compose.yml > docker-compose.yml
       docker compose pull
     command: |
       ENDPOINT=$(gp url 3001) ADMIN_ENDPOINT=$(gp url 3002) docker compose -p logto up
