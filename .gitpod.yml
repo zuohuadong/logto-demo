@@ -1,12 +1,11 @@
 tasks:
   - name: Start Logto
     init: |
-      curl -fsSL https://raw.githubusercontent.com/logto-io/logto/1d2b8554199f0cd85eb6a230310b71c96a2c431a/docker-compose.yml > docker-compose.yml
+      curl -fsSL https://raw.githubusercontent.com/logto-io/logto/v1.0.0/docker-compose.yml > docker-compose.yml
       docker compose pull
     command: |
       ENDPOINT=$(gp url 3001) ADMIN_ENDPOINT=$(gp url 3002) docker compose -p logto up
-    env:
-      TAG: prerelease
+
 ports:
   - name: Logto
     description: The Logto core service
