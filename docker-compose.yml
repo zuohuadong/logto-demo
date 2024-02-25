@@ -18,7 +18,8 @@ services:
       - ENDPOINT
       - ADMIN_ENDPOINT
   postgres:
-    image: postgres:15-alpine
+    #image: postgres:15-alpine
+    image: corpusops/postgis-bare:15
     user: postgres
     environment:
       POSTGRES_USER: postgres
