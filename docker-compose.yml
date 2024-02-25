@@ -30,11 +30,11 @@ services:
       timeout: 5s
       retries: 5
   pgadmin4:
-        image: elestio/pgadmin:latest
-        restart: always
-        environment:
-        PGADMIN_DEFAULT_EMAIL: admin@admin.com
-        PGADMIN_DEFAULT_PASSWORD: 112233
+      image: elestio/pgadmin:latest
+      restart: always
+      environment:
+        PGADMIN_DEFAULT_EMAIL: admin@123.com
+        PGADMIN_DEFAULT_PASSWORD: 123qwe
         PGADMIN_LISTEN_PORT: 8080
-        ports:
+      ports:
         - "8080:8080"
